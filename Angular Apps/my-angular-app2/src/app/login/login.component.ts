@@ -1,0 +1,23 @@
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent {
+  username!:  string;
+  password!: string;
+  flag!:boolean;
+
+  constructor(private router:Router){}
+
+
+  login(){
+    this.flag=true;
+    alert("login Successfull ->" + this.username + this.password);
+    this.router.navigate(['/dashboard']);
+  }
+
+}

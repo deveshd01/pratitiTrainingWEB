@@ -1,0 +1,58 @@
+.pad{
+    padding: 5px;
+}
+div {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.square {
+    width: 350px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: auto;
+    padding: 15px;
+}
+
+.center {
+    margin: auto;
+}
+
+label {
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 1px;
+}
+
+.bt {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    background: #f0c14b;
+    border-color: #a88734 #9c7e31 #846a29;
+}
+input{
+    padding: 5px;
+    margin-top: 1px;
+    
+}
+
+
+.createA{
+    padding-top: -100px;
+    padding-bottom: 1px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.logo{
+    width: 150px;
+    margin: auto;
+}

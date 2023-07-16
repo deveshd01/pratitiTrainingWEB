@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table manupulation Using jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script>
+        $(function () {
+            $(".down").click(function () {
+                var row = $(this).parents("tr:first");
+                row.insertAfter(row.next());
+            })
+            $(".up").click(function () {
+                var row = $(this).parents("tr:first");
+                row.insertBefore(row.prev());
+            })
+        })
+
+    </script>
+<style>
+    #table{
+        background-color: aqua;
+        margin: auto;
+        margin-top: 150px;
+        width: 400px;
+        height: 300px;
+    }
+    td{
+        padding: 15px;
+    }
+</style>
+
+</head>
+
+<body>
+    <table id="table" border="20">
+        <tr>
+            <td> 1 </td>
+            <td>Devsh</td>
+            <td>100</td>
+            <td><button class="up">UP</button> <button class="down">DOWN</button> </td>
+        </tr>
+        <tr>
+            <td> 2 </td>
+            <td>Devesh2</td>
+            <td>1200</td>
+            <td><button class="up">UP</button> <button class="down">DOWN</button> </td>
+        </tr>
+        <tr>
+            <td> 3 </td>
+            <td>Devsh3</td>
+            <td>1300</td>
+            <td><button class="up">UP</button> <button class="down">DOWN</button> </td>
+        </tr>
+        <tr>
+            <td> 4 </td>
+            <td>De4vsh3</td>
+            <td>13040</td>
+            <td><button class="up">UP</button> <button class="down">DOWN</button> </td>
+        </tr>
+        <tr>
+            <td> 5 </td>
+            <td>Devsh4</td>
+            <td>10044</td>
+            <td><button class="up">UP</button> <button class="down">DOWN</button> </td>
+
+        </tr>
+        <tr>
+            <td> 6 </td>
+            <td>De4vesh2</td>
+            <td>12060</td>
+            <td><button class="up">UP</button> <button class="down">DOWN</button> </td>
+        </tr>
+        
+    </table>
+
+</body>
+
+</html>

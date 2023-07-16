@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script>
+        $(function () {
+            $("#bt1").click(function () {
+
+                var n = document.getElementById("count").value;
+                for (var i = 0; i < n; i++) {
+                    var field1 = $("<p />").text(" Passenger Name : ");
+                    var field2 = $('<input id="id"+i/>');
+                    $(".d").append(field1);
+                    $(".d").append(field2);
+                }
+
+                var field3 = $('<br><br><button id="bt2"/>').text("display");
+                $(".d").append(field3);
+
+
+            })
+
+            $("#bt2").click(function () {
+                alert("in BT2");
+                var n = document.getElementById("count").value;
+                for (let i = 0; i < n; i++) {
+                    var v = document.getElementById("id" + i).value;
+                    var field1 = $("<p />").text(" Passenger Name : " + v);
+                    $(".d").append(field1);
+                }
+            })
+        })
+
+    </script>
+    <style>
+        .d {
+            margin: auto;
+            width: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <label for="">Enter Number of Passengers : </label>
+    <input type="text" id="count">
+    <button id="bt1">Submit</button>
+    <div class="d">
+
+    </div>
+
+</body>
+
+</html>

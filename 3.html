@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getMyLocation</title>
+</head>
+<body>
+    <button onclick="getMyLocation()"> location </button>
+    <div id="result"></div>
+
+    <script>
+        var x = document.getElementById("result")
+        function getMyLocation() {
+            navigator.geolocation.getCurrentPosition((position)=>{
+                x.innerHTML = "Latitude: " + position.coords.latitude +" " + "Longitude: " + position.coords.longitude;
+            });
+        }
+    
+
+
+    </script>
+</body>
+</html>

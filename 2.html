@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+</head>
+
+<body>
+    <script>
+        function up() {
+            document.getElementById("u1").
+        }
+
+
+    </script>
+
+
+    <table id="table" border="1">
+
+        <tr>
+            <th> Emp no</th>
+            <th>Emp Name</th>
+            <th>Emp Salary</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td> 1 </td>
+            <td>Devsh</td>
+            <td>100</td>
+            <td><button id="d1" onclick="upNdown('down');">DOWN</button></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td> 2 </td>
+            <td>Devesh2</td>
+            <td>1200</td>
+            <td><button id="u1" onclick="upNdown('up');">UP</button><button id="d2"
+                    onclick="upNdown('down');">DOWN</button></td>
+        </tr>
+        <tr>
+            <td> 3 </td>
+            <td>Devsh3</td>
+            <td>1300</td>
+            <td><button id="u2" onclick="upNdown('up');">UP</button></td>
+        </tr>
+    </table>
+
+
+    <script>
+
+        var index;
+        function getSelectedRow() {
+            var table = document.getElementById("table");
+            for (var i = 1; i < table.rows.length; i++) {
+                table.rows[i].onclick = function () {
+                    // clear the selected from the previous selected row
+                    // the first time index is undefined
+                    if (typeof index !== "undefined") {
+                        table.rows[index].classList.toggle("selected");
+                    }
+
+                    index = this.rowIndex;
+                    this.classList.toggle("selected");
+
+                };
+            }
+        }
+
+
+        getSelectedRow();
+
+
+        function upNdown(direction) {
+            var rows = document.getElementById("table").rows,
+                parent = rows[index].parentNode;
+            if (direction === "up") {
+                if (index > 1) {
+                    parent.insertBefore(rows[index], rows[index - 1]);
+                    index--;
+                }
+            }
+
+            if (direction === "down") {
+                if (index < rows.length - 1) {
+                    parent.insertBefore(rows[index + 1], rows[index]);
+                    index++;
+                }
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>

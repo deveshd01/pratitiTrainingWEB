@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar</title>
+</head>
+<body>
+    <progress id="prog" max="100" value="40" style="height: 50px;"></progress>
+    <script>
+        var i = document.getElementById('prog');
+        
+        var timer = setInterval(() => {
+            console.log(i.value);
+            i.value +=1;
+            if (i.value==60) {
+                clearInterval(timer);
+            }
+        }, 500);
+    
+    </script>
+ 
+    
+</body>
+</html>

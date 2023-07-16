@@ -1,0 +1,18 @@
+<div class="comtainer">
+    <h1>Login Form</h1>
+    <form (ngSubmit)="login()">
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" name="t1" class="form-control" [(ngModel)]="username"/>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="t2" class="form-control" [(ngModel)]="password" />
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <p *ngIf="flag">
+        your name is {{username}}  
+        your password is {{password}}
+    </p>
+</div>

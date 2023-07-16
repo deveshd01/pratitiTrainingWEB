@@ -1,0 +1,112 @@
+form {
+    margin: 20px;
+}
+
+.input-field {
+    position: relative;
+    width: 250px;
+    height: 44px;
+    line-height: 44px;
+}
+
+label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #d3d3d3;
+    transition: 0.2s all;
+    cursor: text;
+}
+
+input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #d3d3d3;
+    box-shadow: none;
+    color: #111;
+}
+
+input:invalid {
+    outline: 0;
+}
+
+input:focus,
+input:valid {
+    border-color: #5e5074;
+}
+
+input:focus~label,
+input:valid~label {
+    font-size: 14px;
+    top: -24px;
+    color: hsl(263, 18%, 38%);
+}
+
+
+.border {
+    border: #111 1px solid;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 50px;
+    height: 500px;
+    /* Should be removed. Only for demonstration */
+
+}
+
+.left {
+    width: 40%;
+    background-color: #3b38d8;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+}
+
+.right {
+    width: 60%;
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.homeBG {
+    margin: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
+
+}
+
+.para {
+    color: white;
+    font-size:160%;
+}
+
+button{
+    margin-top: 30px;
+    display: block;
+  width: 100%;
+  border: none;
+  border-radius: 5%;
+  background-color: #04AA6D;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}

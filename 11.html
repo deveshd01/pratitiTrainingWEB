@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <title>Document</title>
+    <script>
+        $(function(){
+            // $("p").css("color","red");
+            // $(".abc > p").css("color","blue");       // Using CSS selector
+            // $(".abc").children("p").css("color","red");   //using jQuery DOM API
+            // $($("div").get(1)).children("p").css("color","blue");  
+            // $("div").last().children("p").css("color","blue");  
+            // $($("p").get(0)).css("color","green");  
+            $("p").first().css("color","green");  
+        })
+    </script>
+    <style>
+        .abc{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <p>one</p>
+    <div class="abc">
+        <p>two</p>
+    </div>
+    <div>
+        <p>three</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+    <script>
+        var myChart = new Chart("myChart", {
+            type: "scatter",
+            data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 7830, 2478],
+            options: ['1', '2', '3', '4', '5', '6', '7', '8', '9', 0]
+        });
+    </script>
+</body>
+
+</html>

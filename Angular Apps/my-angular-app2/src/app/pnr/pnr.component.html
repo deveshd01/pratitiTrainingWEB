@@ -1,0 +1,18 @@
+<div>
+    <br><br>
+    ENTER PNR  :  <input type="text" name="pnr" [(ngModel)]="Userpnr"/>
+    
+    <div><br><button (click)="search()">SEARCH</button></div>
+    
+    <div *ngIf="pnrInfo">
+        <br>
+        <h4>pnrNo : {{pnrInfo.pnrNo}}</h4> 
+        <h4>train no. : {{pnrInfo.trainNo}} </h4><br/>
+
+        <div> NAME-----------------GENDER---------------------STATUS </div>
+        <div *ngFor="let i of pnrInfo.passengers">
+            <p>{{i.name}}-----------------{{i.gender}}---------------------{{i.status}}   </p>  
+        </div>
+
+    </div>
+</div>

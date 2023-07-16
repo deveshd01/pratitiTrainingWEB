@@ -1,0 +1,12 @@
+<div>
+    <br>Enter 1st number : <input type="number" name="one" [(ngModel)]="a" /><br>
+    <br>Enter 2nd number :<input type="number" name="two" [(ngModel)]="b" /><br><br>
+    <div>
+        <button (click)="add()">ADD</button>
+        <button (click)="sub()">SUB</button>
+    </div>
+    <br><br><br>
+    <p *ngIf="result">
+        Result is {{result}}
+    </p>
+</div>
